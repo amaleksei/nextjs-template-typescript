@@ -1,14 +1,47 @@
 {
-  "plugins": ["@typescript-eslint"],
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "plugins": ["react", "@typescript-eslint", "prettier"],
   "extends": [
-    "airbnb-typescript-prettier",
-    "next",
+    "airbnb",
+    "airbnb/hooks",
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:react/recommended",
+    "next",
     "prettier"
   ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
   "rules": {
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
     "@typescript-eslint/no-unused-vars": "error",
-    "@typescript-eslint/no-explicit-any": "error"
+    "@typescript-eslint/no-explicit-any": "error",
+    "prefer-const": "error",
+    "react/prop-types": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "react/jsx-props-no-spreading": ["error", { "custom": "ignore" }],
+    "prettier/prettier": "error",
+    "react/no-unescaped-entities": "off",
+    "import/no-cycle": [0, { "ignoreExternal": true }],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "function-declaration"
+      }
+    ]
   }
 }
