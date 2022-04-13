@@ -1,12 +1,30 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
+Before start make sure that you have the latest version of Node in your terminal, and compare it to the latest LTS version listed on https://nodejs.org/.
+```bash
+node -v
+```
 
-First, run the development server:
+Check if you have installed `yarn` package manager:
+```bash
+yarn --version
+```
+if `yarn` does not exist install it:
+```bash
+npm install --global yarn
+```
+or for windows https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable
+
+
+1. Install dependencies:
+```bash
+yarn
+```
+
+2. Run the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
 ```
 
